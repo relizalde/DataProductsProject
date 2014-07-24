@@ -35,9 +35,26 @@ The outputs of the app are "reactive" and therefore should re-execute automatica
 
 --- .class #id
 
-## Slide 4
+## Internal Operations
 
-Pending
+Considering the user selection, the app filters the original `mtcars` dataset. It displays on the sidebar the data filtered and on the main section displays the number of cars analyzed and plot the mileage by cylinder number for this data.
+
+The total number of cars analyzed is calculated as following (for the purpose of this example we assume the user select 4 and 6 cylinders in the car):
+
+
+
+
+```r
+x <- row.names(mtcars[mtcars$cyl %in% c(4,6),])
+        
+cat('Total number of cars analyzed: ', as.character(length(x)))
+```
+
+```
+## Total number of cars analyzed:  18
+```
+
+On the following slide the resultant Shiny app is shown.
 
 --- .class #id
 

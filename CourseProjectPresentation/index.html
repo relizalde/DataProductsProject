@@ -79,10 +79,22 @@
 
 <slide class="class" id="id" style="background:;">
   <hgroup>
-    <h2>Slide 4</h2>
+    <h2>Internal Operations</h2>
   </hgroup>
   <article data-timings="">
-    <p>Pending</p>
+    <p>Considering the user selection, the app filters the original <code>mtcars</code> dataset. It displays on the sidebar the data filtered and on the main section displays the number of cars analyzed and plot the mileage by cylinder number for this data.</p>
+
+<p>The total number of cars analyzed is calculated as following (for the purpose of this example we assume the user select 4 and 6 cylinders in the car):</p>
+
+<pre><code class="r">x &lt;- row.names(mtcars[mtcars$cyl %in% c(4,6),])
+
+cat(&#39;Total number of cars analyzed: &#39;, as.character(length(x)))
+</code></pre>
+
+<pre><code>## Total number of cars analyzed:  18
+</code></pre>
+
+<p>On the following slide the resultant Shiny app is shown.</p>
 
   </article>
   <!-- Presenter Notes -->
@@ -114,7 +126,7 @@
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=3 title='Slide 4'>
+        data-slide=3 title='Internal Operations'>
          3
       </a>
     </li>
