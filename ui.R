@@ -19,6 +19,13 @@ shinyUI(pageWithSidebar(
     mainPanel(
         h3('Plot Area'),
         wellPanel(p('Total number of cars analyzed: '), textOutput('totalTxt')),
-        wellPanel(plotOutput("carsPlot"))        
-    )
-))
+        wellPanel(plotOutput("carsPlot")),
+        wellPanel(
+            h3('About'),
+            p("This app was created for the course project in the Developing Data Products class in Coursera. For more details you can check the ",
+              a("README", 
+                href = "https://github.com/relizalde/DataProductsProject/blob/master/README.md"), ' file.')
+            
+            
+        ))
+    ))
