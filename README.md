@@ -22,6 +22,6 @@ For the purpose of the application, we only worked with the `mpg`, `cyl` and `am
 
 The Shiny app consists in a `ggplot2` boxplot of `mpg` by number of `cyl`, comparing *automatic*  and *manual* transmission. The app also displays the number of cars analyzed and the table with the data. The user needs to select the number of cylnders as a filter for the original data.
 
-The outpust of the app are "reactive" and therefore should re-execute automatically when inputs change.
+The outputs of the app are "reactive" and therefore should re-execute automatically when inputs change.
 
 
